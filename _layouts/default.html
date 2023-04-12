@@ -1,0 +1,15 @@
+{% include head.html %}
+<section class="page-header small-nav">
+  <a href="https://gaymers.gg/" class="home-link">
+    <img class="logo" src="/assets/images/gaymers-logo.png" alt="Gaymers Logo">
+    <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+  </a>
+
+  <a href="https://discord.gg/gaymers" class="discord-button">Join us on Discord</a>
+</section>
+
+<section class="main-content">
+  {{ content }}
+</section>
+
+{% include footer.html %}

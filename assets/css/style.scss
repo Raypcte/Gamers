@@ -1,0 +1,137 @@
+---
+---
+
+// Headers
+$header-heading-color: #fff;
+$header-bg-color: #FF9AF4;
+$header-bg-color-secondary: #35CFFF;
+$header-bg-color-tertiary: #BD51FF;
+
+// Text
+$section-headings-color: #BD51FF;
+$body-text-color: #606c71;
+$body-link-color: #BD51FF;
+$blockquote-text-color: #35CFFF;
+
+// Code
+$code-bg-color: #E9E9E9;
+$code-text-color: #000000;
+
+// Borders
+$border-color: #BD51FF;
+$table-border-color: #BD51FF;
+$hr-border-color: #BD51FF;
+
+@import "{{ site.theme }}";
+
+.logo {
+  @include large {
+    max-width: 40rem;
+  }
+
+  @include medium {
+    max-width: 30rem;
+  }
+
+  @include small {
+    max-width: 16rem;
+  }
+}
+
+.discord-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px 10px 50px;
+  background-color: #7289DA;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all ease-out 150ms;
+}
+
+.discord-button:hover {
+  background-color: #4A67Cf;
+  text-decoration: none;
+}
+
+.discord-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  background-image: url('/assets/images/discord-logo-white.svg');
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.small-nav {
+  height: 4rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .logo {
+    max-width: 3rem;
+    display: inline;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .home-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .discord-button {
+    margin-left: auto;
+
+    @include small {
+      display: none;
+    }
+  }
+}
+
+footer {
+  margin-top: 0 !important;
+  border-top: none !important;
+  word-wrap: break-word;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  @include large {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  @include medium {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+}
